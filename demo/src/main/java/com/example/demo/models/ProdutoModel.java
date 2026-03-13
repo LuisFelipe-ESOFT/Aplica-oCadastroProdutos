@@ -1,9 +1,7 @@
 package com.example.demo.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.demo.StatusProduto;
+import jakarta.persistence.*;
 
 @Entity
 
@@ -15,6 +13,9 @@ public class ProdutoModel {
     private String nome;
     private Double preco;
     private Integer quantidadeEmEstoque;
+
+    @Enumerated(EnumType.STRING)
+    private StatusProduto statusProduto;
 
     public ProdutoModel() {}
 
